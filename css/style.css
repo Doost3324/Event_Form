@@ -12,7 +12,8 @@ body {
 }
 
 body {
-    font-family: "Oswald", "Roboto";
+    /* font-family: "Oswald", "Roboto"; */
+    font-family: "Roboto", sans-serif;
     line-height: 1.7;
     /* background: #e8d8ca; */
     /* background: linear-gradient(#5e763f, #e8d8ca); */
@@ -35,6 +36,7 @@ nav {
     gap:1rem;
 
     padding:1rem 2rem;
+    font-family: "Oswald", sans-serif;
 
     margin-top:2rem;
     margin-bottom: 2rem;
@@ -69,6 +71,7 @@ nav a {
     color: #202b12;
 
     border-radius:999px;
+    font-size: 1.2rem;
 
     transition:.2s;
 }
@@ -96,6 +99,7 @@ nav a:hover {
     font-size: 4rem;
     margin-bottom: 1rem;
     color: #202b12;
+    font-family: "Oswald", sans-serif;
 }
 
 section {
@@ -108,6 +112,8 @@ section {
 section h2 {
     margin-bottom: 1rem;
     color: #5e763f;
+    font-family: "Oswald", sans-serif;
+
 }
 
 section ul {
@@ -126,6 +132,7 @@ section ul {
     /* background: white; */
     background: linear-gradient(white, #e8d8ca);
     border-radius: 24px;
+    font-size: 1.2rem;
 
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -146,6 +153,7 @@ section ul {
 #actual-about,
 #additional-info {
     background: rgba(255,255,255,.35);
+    margin-bottom: 2rem;
 
     border-radius: 24px;
 
@@ -160,7 +168,26 @@ section ul {
 
     margin:auto;
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+#about-intro ul,
+#actual-about ul {
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:1rem;
+
+    list-style:none;
+}
+
+#about-intro li,
+#actual-about li {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 #benefits ul,
@@ -181,14 +208,21 @@ section ul {
 #who li {
     background:rgba(255,255,255,.7);
     text-align: center;
+    font-size: 1.2rem;
 
     padding:1rem;
 
     border-radius:16px;
 }
 
+#who p {
+    font-size: 1.4rem;
+}
+
 section li {
     margin-bottom:.7rem;
+    font-size: 1.2rem;
+    margin-top: .7rem
 }
 
 .format-grid {
@@ -198,6 +232,7 @@ section li {
         repeat(auto-fit,minmax(250px,1fr));
 
     gap:1rem;
+    padding-bottom: 1.2rem;
 }
 
 .format-item {
@@ -208,6 +243,7 @@ section li {
     padding:1.5rem;
 
     text-align:center;
+    font-size: 1.2rem;
 
     box-shadow:
         0 4px 10px rgba(0,0,0,.06);
@@ -217,6 +253,7 @@ section li {
     font-size: 2rem;
 
     margin-bottom: .5rem;
+    margin-top: .5rem;
 }
 
 .timeline {
@@ -228,6 +265,7 @@ section li {
         repeat(auto-fit, minmax(220px, 1fr));
 
     gap: 1rem;
+    font-size: 1.2rem;
 
     margin-top: 2rem;
 }
@@ -265,6 +303,7 @@ section li {
 
     padding:0.8rem;
     border-radius:24px;
+    font-size: 1.2rem;
 
     text-align:center;
 }
@@ -333,12 +372,21 @@ section li {
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: #5e763f;
 }
 
+.hero-description {
+    font-size: 1.7rem;
+    color: black;
+}
+
+#additional-info {
+    backdrop-filter: blur(20px);
+}
+
 footer {
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     padding: 3rem 2rem;
 
@@ -355,7 +403,7 @@ footer {
     justify-content: center;
 }
 
-.socials {
+/* .socials {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
@@ -408,6 +456,107 @@ footer {
 
     transition: .2s;
 
+}
+
+.instagram-btn:hover {
+    color: #5e763f;
+}
+
+.facebook-btn:hover {
+    color: #5e763f;
+}
+
+.telegram-btn:hover {
+    color: #5e763f;
+} */
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+
+    padding: .6rem 1.2rem;
+
+    background: rgba(255,255,255,.1);
+
+    border-radius: 999px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.social-btn:hover {
+    color: #5e763f;
+
+    background: rgba(255,255,255,.15);
+}
+
+.social-dropdown {
+    position: relative;
+}
+
+.social-dropdown summary {
+    list-style: none;
+}
+
+.social-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown-links {
+    position: absolute;
+
+    bottom: 120%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 180px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.15);
+
+    z-index: 100;
+}
+
+.dropdown-links a {
+    display: block;
+
+    padding: .8rem 1rem;
+
+    color: #202b12;
+
+    text-decoration: none;
+
+    transition: .2s;
+}
+
+.dropdown-links a:hover {
+    background: #5e763f;
 }
 
 .footer-nav a {
