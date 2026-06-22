@@ -72,6 +72,7 @@ nav a {
 
     border-radius:999px;
     font-size: 1.2rem;
+    justify-content: center;
 
     transition:.2s;
 }
@@ -471,15 +472,15 @@ footer {
 } */
 
 .socials {
-    display: flex;
 
+    display: flex;
     justify-content: center;
 
     align-items: center;
 
-    gap: 1rem;
+    flex-direction: row;
 
-    flex-wrap: wrap;
+    gap: 5rem;
 }
 
 .social-btn {
@@ -561,4 +562,151 @@ footer {
 
 .footer-nav a {
     color:white;
+}
+
+/* mobile stuff */
+
+
+@media (max-width: 768px) {
+
+    nav {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+
+        gap: .5rem;
+
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    nav a {
+    color: #202b12;
+
+    border-radius: 20px;
+    font-size: 1rem;
+
+    transition:.2s;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    nav a:hover {
+    background:#5e763f;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    color:white;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hosts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #benefits ul,
+    #process ul,
+    #who ul,
+    #about-intro ul,
+    #actual-about ul {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #benefits li,
+    #process li,
+    #who li,
+    .host-card,
+    #about-intro li,
+    #actual-about li,
+    #additional-info li
+    .format-item {
+
+        font-size: 1.2rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    #about-intro p,
+    #actual-about p,
+    #additional-info p {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .register-btn,
+    .call-btn {
+
+        width: 100%;
+
+        max-width: 260px;
+
+        margin: 0;
+        font-size: 1rem;
+
+        border-radius: 100px;
+
+        text-align: center;
+
+        padding: 1rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+
 }
