@@ -33,19 +33,36 @@ document.querySelectorAll(".social-dropdown")
     });
 });
 
-const observer = new IntersectionObserver((entries) => {
+// const observer = new IntersectionObserver((entries) => {
 
+//     entries.forEach(entry => {
+
+//         if (entry.isIntersecting) {
+
+//             entry.target.classList.add("show");
+//         }
+
+//     });
+
+// }, {
+//     threshold: 0.15
+// });
+
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
+            console.log("Showing:", entry.target.id);
 
             entry.target.classList.add("show");
+            observer.unobserve(entry.target);
         }
 
     });
 
 }, {
-    threshold: 0.15
+    threshold: 0,
+    rootMargin: "100px"
 });
 
 document
