@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.fade-in {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
 
 html,
 body {
@@ -20,8 +35,22 @@ body {
     /* background: linear-gradient(#5e763f, #e8d8ca); */
     /* background: radial-gradient(#5e763f, #e8d8ca); */
     background: radial-gradient(#e8d8ca, #5e763f);
+    /* background-image: url("/imgs/gradient-4th.png");
+  
+    background-position: center;
+  
+    background-repeat: no-repeat;
+  
+    background-size: cover; */
     /* background: radial-gradient(#e8d8ca, #5e763f, #202b12); */
     color: #202b12;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+
+    display: block;
 }
 
 nav {
@@ -65,6 +94,11 @@ nav a {
     width: auto;
 }
 
+/* nav a.active {
+    background: #5e763f;
+    color: white;
+} */
+
 nav a:hover {
     background:#5e763f;
     border-radius: 999px;
@@ -85,9 +119,18 @@ nav a:hover {
     margin-bottom: 3rem;
 }
 
+.hero-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: left;
+
+    gap: 10rem;
+    padding-bottom: 1rem;
+}
+
 #hero h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
     color: #202b12;
     font-family: "Oswald", sans-serif;
 }
@@ -287,6 +330,65 @@ section li {
     transform: translateY(-5px);
 }
 
+.host-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 1rem;
+
+    gap: 1rem;
+}
+
+.host-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: #5e763f;
+
+    border-radius: 12px;
+
+    transition: .2s;
+
+    flex-shrink: 0;
+}
+
+.host-link:hover {
+
+    background: #202b12;
+
+    transform: scale(1.05);
+}
+
+.host-header h3 {
+
+    margin: 0;
+
+    color: #5e763f;
+
+    font-family: "Oswald", sans-serif;
+}
+
+.host-link img {
+
+    width: 24px;
+
+    height: 24px;
+
+    object-fit: contain;
+}
+
 .hosts-grid {
     display: grid;
 
@@ -297,14 +399,77 @@ section li {
 }
 
 .host-card {
-    background:white;
 
-    padding:0.8rem;
-    border-radius:24px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    background: white;
+
+    padding: 1rem;
+
+    border-radius: 24px;
+
     font-size: 1.2rem;
 
-    text-align:center;
+    text-align: left;
 }
+
+.host-info {
+
+    flex: 1;
+}
+
+.host-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: .75rem;
+}
+
+.pfp-img {
+
+    width: 200px;
+    height: 200px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 0 0 4px #5e763f,
+        0 6px 50px rgba(0,0,0,.15);
+}
+
+/* 
+.pfp-img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 5px solid #ffffff;
+
+    box-shadow:
+        0 0 0 4px #5e763f,
+        0 6px 50px rgba(0,0,0,.15);
+
+    display: block;
+
+    margin: 0 auto 1rem auto;
+} */
 
 .register-btn {
     display: inline-block;
@@ -352,6 +517,19 @@ section li {
 
 .call-btn:hover {
     background: #202b12;
+}
+
+.register-btn,
+.call-btn {
+    transition:
+        transform .2s,
+        background-color .2s;
+}
+
+.register-btn:hover,
+.call-btn:hover {
+
+    transform: translateY(-3px);
 }
 
 .button-container {
@@ -634,8 +812,22 @@ footer {
 
 @media (max-width:768px) {
 
+    /* body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+
+    background-image: url("/imgs/gradient-4th.png");
+  
+    background-position: center;
+  
+    background-repeat: no-repeat;
+  
+    background-size: cover;
+    } */
+
     nav {
         display:grid;
+        font-family: "Oswald", sans-serif;
         grid-template-columns:1fr 1fr;
         gap:.5rem;
         width:90%;
@@ -656,6 +848,26 @@ footer {
 
     .hosts-grid {
         grid-template-columns:1fr;
+    }
+
+    .host-card {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .host-header {
+
+        flex-direction: column;
+
+        gap: .5rem;
+    }
+
+    .pfp-img {
+
+        width: 150px;
+        height: 150px;
     }
 
     #benefits ul,
@@ -680,6 +892,12 @@ footer {
 
     section {
         padding:2rem 1rem;
+    }
+
+    .hero-title {
+        flex-direction: column;
+        gap: 0rem;
+        padding-bottom: 0rem;
     }
 
     #hero h1 {
