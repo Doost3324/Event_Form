@@ -841,11 +841,11 @@ footer {
     background-size: cover;
     } */
 
-    .fade-in,
+    /* .fade-in,
     .fade-in.show {
         opacity: 1;
         transform: none;
-    }
+    } */
 
     nav {
         display:grid;
