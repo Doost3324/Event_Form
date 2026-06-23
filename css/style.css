@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -261,6 +264,7 @@ section ul {
     font-size: 1.5rem;
 
     padding:1rem;
+    font-weight: bold;
 
     border-radius:16px;
 }
@@ -273,7 +277,8 @@ section ul {
 section li {
     margin-bottom:.7rem;
     font-size: 1.2rem;
-    margin-top: .7rem
+    margin-top: .7rem;
+    font-weight: bold;
 }
 
 .format-grid {
@@ -330,6 +335,7 @@ section li {
     border-left: 6px solid #5e763f;
 
     border-radius: 12px;
+    font-weight: bold;
 
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 
